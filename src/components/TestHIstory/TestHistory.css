@@ -1,0 +1,43 @@
+.testCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testFIO {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.testGroup {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+.testResult {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b6cb0;
+  margin-bottom: 6px;
+}
+
+.testTime {
+  font-size: 14px;
+  color: #718096;
+}
+
+.noneTest{
+  text-align: center;
+  margin-top: 30px;
+  color: #2b6cb0;
+  font-size: 20px;
+  font-weight: 700;
+}
