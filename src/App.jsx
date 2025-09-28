@@ -110,7 +110,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/kazakh-language-test'>
           <Routes>
             <Route path='/' element={<Main/>}/>
             <Route path='/test' element={<Test quiz={quiz}/>}/>
