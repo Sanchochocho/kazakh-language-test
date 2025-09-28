@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Main from './components/Main/Main'
 import Test from './components/Test/Test';
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import { Route, Routes, HashRouter } from 'react-router-dom'
 import TestHistory from './components/TestHIstory/TestHistory';
 
 function App() {
@@ -110,13 +110,13 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='/kazakh-language-test'>
+      <HashRouter>
           <Routes>
             <Route path='/' element={<Main/>}/>
             <Route path='/test' element={<Test quiz={quiz}/>}/>
             <Route path='/test_history' element={<TestHistory/>}/>
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
