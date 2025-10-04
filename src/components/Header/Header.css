@@ -1,7 +1,10 @@
 .header {
-    background: #1d4ed8;
-    color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ background: 
+    linear-gradient(rgba(14, 33, 83, 0.7), rgba(29, 25, 112, 0.7)),
+    url("./image/hedear_img.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 .header-inner {
@@ -12,11 +15,31 @@
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  transition: all 0.4s ease;
+  cursor: default;
 }
 
 
+
+/* Небольшая анимация мерцания */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); }
+  50% { text-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
+  100% { text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); }
+}
+
+.logo {
+  animation: glow 3s ease-in-out infinite;
+}
 
 .nav {
     display: flex;
@@ -37,18 +60,32 @@
 
 .nav-list a,
 .nav-list button {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  animation: glowPulse 4s ease-in-out infinite;
 }
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+    transform: scale(1.02);
+  }
+}
+
 
 .nav-list a:hover,
 .nav-list button:hover {
-    color: #cbd5e1;
+    color: #0374ff;
 }
 
 @media (max-width: 768px) {

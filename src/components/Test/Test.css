@@ -8,24 +8,45 @@ body {
     max-width: 400px;
     margin: 80px auto;
     padding: 30px;
-    background: #fff;
+    background: 
+        #fff url("./image/oZ1bGJNyL6ZO3D5VY0-tklc2mwyiFWgsoGXNFmC_uX3g-VP1vm-GOVyf6tTy-MFxU9XObS67wWX84eK1nIjXnmJT.png") no-repeat center center / cover;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
 }
 
+.regist::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.879); /* светлый или тёмный слой */
+  border-radius: 12px;
+}
+.regist * {
+  position: relative;
+}
+
+
 .form_title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #1d4ed8;
-    margin-bottom: 24px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  transition: all 0.4s ease;
+  cursor: default;
 }
 
 .regist input {
     width: 90%;
     padding: 12px 14px;
     margin: 10px 0;
-    border: 1px solid #d1d5db;
+    border: 1px solid #406daf;
     border-radius: 8px;
     font-size: 16px;
     transition: border 0.3s ease, box-shadow 0.3s ease;
@@ -38,26 +59,50 @@ body {
 }
 
 .regist button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    background: #1d4ed8;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* ✨ Эффект подсветки при наведении */
 .regist button:hover {
-    background: #2563eb;
+  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.6);
 }
 
+/* 💡 Небольшое свечение при клике */
 .regist button:active {
-    transform: scale(0.97);
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
 }
+
+/* 💫 Анимация “вспышки”, которая пробегает по кнопке */
+.regist button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+
 
 .test_container {
     max-width: 800px;
@@ -93,46 +138,51 @@ body {
     margin-bottom: 12px;
 }
 
+
+/* 🟦 Варианты ответов */
 .question_block label {
-    display: flex;
-    align-items: center;
-    margin: 6px 0;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.25s ease, transform 0.15s ease;
 }
 
 .question_block input[type="radio"] {
-    margin-right: 10px;
-    accent-color: #1d4ed8;
+  margin-right: 10px;
+  accent-color: #2563eb;
 }
 
 .question_block label:hover {
-    background: #e5edff;
+  background: #e0eaff;
+  transform: translateX(4px);
 }
 
+/* 🔘 Кнопка теста */
 .test_container button {
-    display: block;
-    margin: 30px auto 10px auto;
-    background: #1d4ed8;
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+  display: block;
+  margin: 30px auto 10px auto;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
 }
 
 .test_container button:hover {
-    background: #153eaf;
+  background: linear-gradient(135deg, #1d4ed8, #60a5fa);
+  transform: translateY(-2px);
 }
 
 .test_container button:active {
-    transform: scale(0.97);
+  transform: scale(0.97);
 }
 
 .result {
